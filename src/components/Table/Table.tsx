@@ -124,6 +124,10 @@ const columns: GridColDef[] = [
     type: 'string',
     width: 180,
     editable: true,
+    preProcessEditCellProps: (params: GridPreProcessEditCellProps) => {
+      const hasError = isNaN(params.props.value)
+      return { ...params.props, error: hasError };
+    }
   },
   {
     field: 'goodsOnTheWay',
@@ -142,6 +146,10 @@ const columns: GridColDef[] = [
     type: 'string',
     width: 180,
     editable: true,
+    preProcessEditCellProps: (params: GridPreProcessEditCellProps) => {
+      const hasError = isNaN(params.props.value)
+      return { ...params.props, error: hasError };
+    }
   },
 ];
 
