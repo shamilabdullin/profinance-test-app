@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './InfoCard.module.sass'
 import { Divider } from '@mui/material'
+import styles from './InfoCard.module.sass'
 
 function InfoCard() {
   return (

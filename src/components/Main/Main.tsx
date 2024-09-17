@@ -1,11 +1,11 @@
-import React, { Dispatch, SetStateAction } from 'react'
-import styles from './Main.module.sass'
+import React, { Dispatch, SetStateAction, useState } from 'react'
 import Filter from './Filter/Filter'
 import ActionButtons from './ActionButtons/ActionButtons'
 import Actions from './Actions/Actions'
 import Button from '../ui/Button'
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks'
 import { Products } from '@/app/page'
+import styles from './Main.module.sass'
 
 type MainProps = {
   products: Products[],
@@ -13,6 +13,11 @@ type MainProps = {
 }
 
 function Main(props: MainProps) {
+
+  const [barCode, setBarCode] = useState('5643242134323099')
+  const [aticleNumber, setAticleNumber] = useState('ДжЖСинМом0823')
+  const [size, setSize] = useState('44')
+
   return (
     <div className={styles.main}>
       <div className={styles.main__title}>
@@ -24,8 +29,21 @@ function Main(props: MainProps) {
           Инструкции
         </Button>
       </div>
-      <Filter />
-      <ActionButtons data={props.products} />
+      <Filter
+        barCode={barCode}
+        size={size}
+        aticleNumber={aticleNumber}
+        setAticleNumber={setAticleNumber}
+        setBarCode={setBarCode}
+        setSize={setSize}
+      />
+      <ActionButtons 
+        data={props.products} 
+        setProducts={props.setProducts}
+        barCode={barCode}
+        aticleNumber={aticleNumber}
+        size={size}
+      />
       <Actions setProducts={props.setProducts} />
     </div>
   )

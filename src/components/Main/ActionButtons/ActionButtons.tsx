@@ -1,29 +1,44 @@
 'use client'
-import React from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import Button from '../../ui/Button'
 import styles from './ActionButtons.module.sass'
-import IosShareIcon from '@mui/icons-material/IosShare';
-import { Products } from '@/app/page';
-import { downloadFile } from '@/utils/downloadFiles';
+import IosShareIcon from '@mui/icons-material/IosShare'
+import { Products } from '@/app/page'
+import { downloadFile } from '@/utils/downloadFiles'
 
 type ActionButtonsProps = {
   data: Products[],
+  setProducts: Dispatch<SetStateAction<Products[]>>,
+  barCode: string,
+  aticleNumber: string,
+  size: string
 }
 
-function ActionButtons(props: ActionButtonsProps) {
+function ActionButtons({ aticleNumber, barCode, data, setProducts, size }: ActionButtonsProps) {
+
+  const handleFilterData = () => {
+    const filteredProducts = data
+      .filter(product => product.id === barCode && product.article === aticleNumber && product.size === size)
+    setProducts(filteredProducts)
+  }
 
   const handleExportData = () => {
-    const obj = props.data
+    const obj = data
     const blob = new Blob([JSON.stringify(obj, null, 2)], {
       type: "application/json",
     });
     downloadFile(blob, 'Новый файл')
-    console.log('work')
   }
 
   return (
     <div className={styles.actionButtons}>
-      <Button variant='contained' className={styles.actionButtons__first}>Сформировать</Button>
+      <Button 
+        variant='contained' 
+        className={styles.actionButtons__first}
+        onClick={handleFilterData}
+      >
+        Сформировать
+      </Button>
       <Button 
         variant='contained' 
         className={styles.actionButtons__second}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button, SvgIconTypeMap } from '@mui/material'
+import ArrowDropDownSharpIcon from '@mui/icons-material/ArrowDropDownSharp'
+import { OverridableComponent } from '@mui/material/OverridableComponent'
 import styles from './MenuItem.module.sass'
-import ArrowDropDownSharpIcon from '@mui/icons-material/ArrowDropDownSharp';
-import { OverridableComponent } from '@mui/material/OverridableComponent';
 
 type MenuItemProps = {
   children: string,

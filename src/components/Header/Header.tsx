@@ -3,7 +3,7 @@ import styles from './Header.module.sass'
 import { Paper } from '@mui/material'
 import User from './User'
 import HeaderButtons from './HeaderButtons'
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 
 function Header() {
   return (

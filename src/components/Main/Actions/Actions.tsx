@@ -1,20 +1,18 @@
+import React, { Dispatch, SetStateAction } from 'react'
 import Button from '@/components/ui/Button'
 import { Divider } from '@mui/material'
-import React, { Dispatch, SetStateAction } from 'react'
-import styles from './Actions.module.sass'
 import { Products } from '@/app/page'
 import products from '../../../../data.json'
 import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
 import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import CloseIcon from '@mui/icons-material/Close';
+import styles from './Actions.module.sass'
 
 type ActionsProps = {
   setProducts: Dispatch<SetStateAction<Products[]>>
 }
 
 function Actions(props: ActionsProps) {
-
-  console.log(products)
 
   const handleSetData = () => {
     props.setProducts(products)

@@ -1,8 +1,7 @@
 import React, { Dispatch, SetStateAction, useMemo } from 'react'
+import { TableContainer, Table as MTable, TableRow, TableCell, Paper, TableBody, Box } from '@mui/material'
+import { DataGrid, GridColDef, GridPreProcessEditCellProps } from '@mui/x-data-grid'
 import styles from './Table.module.sass'
-import { TableContainer, Table as MTable, TableHead, TableRow, TableCell, Paper, TableBody, Box } from '@mui/material'
-import { DataGrid, GridColDef, GridPreProcessEditCellProps, GridRowModel, GridRowsProp, GridSlotsComponent, GridSlotsComponentsProps } from '@mui/x-data-grid'
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 type Products = {
   id: string,
@@ -88,6 +87,8 @@ function Table(props: TableProps) {
   )
 }
 
+export default Table
+
 const columns: GridColDef[] = [
   { 
     field: 'id', 
@@ -143,8 +144,6 @@ const columns: GridColDef[] = [
     editable: true,
   },
 ];
-
-export default Table
 
 export function CustomFooterComponent() {
   return (

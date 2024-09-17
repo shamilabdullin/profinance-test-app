@@ -1,5 +1,5 @@
 import React from 'react'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 
 type UserProps = {
   name: string,

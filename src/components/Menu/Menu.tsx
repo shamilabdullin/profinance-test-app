@@ -1,14 +1,14 @@
 'use client'
 import React from 'react'
-import styles from './Menu.module.sass'
 import { Card, CardContent, Typography } from '@mui/material'
 import MenuItem from './MenuItem'
 import Button from '../ui/Button'
 import CloseSharpIcon from '@mui/icons-material/CloseSharp'
 import SettingsIcon from '@mui/icons-material/Settings'
 import EditNoteIcon from '@mui/icons-material/EditNote'
-import StickyNote2Icon from '@mui/icons-material/StickyNote2';
+import StickyNote2Icon from '@mui/icons-material/StickyNote2'
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks'
+import styles from './Menu.module.sass'
 
 function Menu() {
   return (

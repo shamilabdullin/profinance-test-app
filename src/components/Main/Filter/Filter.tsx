@@ -1,14 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
 import FilterItem from '../FilterItem/FilterItem'
 import styles from './Filter.module.sass'
 import { Paper } from '@mui/material'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
-function Filter() {
+type FilterProps = {
+  barCode: string,
+  aticleNumber: string,
+  size: string,
+  setBarCode: React.Dispatch<React.SetStateAction<string>>,
+  setAticleNumber: React.Dispatch<React.SetStateAction<string>>,
+  setSize: React.Dispatch<React.SetStateAction<string>>,
+}
 
-  const [barCode, setBarCode] = useState('5643242134323099')
-  const [aticleNumber, setAticleNumber] = useState('ДжЖСинМом0823')
-  const [size, setSize] = useState('44')
+function Filter({ 
+  aticleNumber, 
+  barCode, 
+  size, 
+  setAticleNumber, 
+  setBarCode, 
+  setSize 
+}: FilterProps) {
 
   return (
     <div className={styles.filter}>
