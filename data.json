@@ -1,0 +1,47 @@
+[
+  { 
+    "id": "2037618545901",
+    "subject": "Одежда",
+    "article": "Кардиган",
+    "size": "50-60",
+    "availableForOrder": "0",
+    "goodsOnTheWay": "40",
+    "totalAmount": "30"
+  },
+  { 
+    "id": "2037618545902",
+    "subject": "Одежда",
+    "article": "Брюки",
+    "size": "50",
+    "availableForOrder": "6",
+    "goodsOnTheWay": "32",
+    "totalAmount": "4"
+  },
+  { 
+    "id": "2037618545903",
+    "subject": "Одежда",
+    "article": "Брюки",
+    "size": "50-54",
+    "availableForOrder": "25",
+    "goodsOnTheWay": "50",
+    "totalAmount": "2"
+  },
+  { 
+    "id": "2037618545904",
+    "subject": "Одежда",
+    "article": "Брюки",
+    "size": "58",
+    "availableForOrder": "18",
+    "goodsOnTheWay": "0",
+    "totalAmount": "15"
+  },
+  { 
+    "id": "2037618545905",
+    "subject": "Одежда",
+    "article": "Брюки1",
+    "size": "52",
+    "availableForOrder": "3",
+    "goodsOnTheWay": "5",
+    "totalAmount": "3"
+  }
+]

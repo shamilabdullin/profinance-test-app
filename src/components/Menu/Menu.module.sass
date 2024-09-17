@@ -1,0 +1,42 @@
+.card
+  background-color: var(--dark-900)
+  color: var(--light) !important
+  width: 100%
+  border-radius: var(--border-radius-classic)
+  box-shadow: none
+
+  &__content
+
+    &__header
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+
+      &__logo
+        display: flex
+        flex-direction: row
+        gap: 0.25rem
+        align-items: center
+
+        &__start
+          background-color: var(--blue-700)
+          padding: 0rem 0.1rem
+          border-radius: 4px
+          font-size: 18px
+
+        &__end
+          font-size: 18px
+
+      &__button
+        background-color: var(--dark-800)
+        border-radius: var(--border-radius-classic)
+        padding: 0.75rem 0.5rem 0.75rem 0.5rem
+        height: 20px
+        color: var(--dark-500)
+        font-size: 12px
+
+    &__body
+      display: flex
+      flex-direction: column
+      margin-top: 1rem
