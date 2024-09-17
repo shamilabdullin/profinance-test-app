@@ -1,17 +1,14 @@
 import React, { Dispatch, SetStateAction, useMemo } from 'react'
+
+// Components
 import { TableContainer, Table as MTable, TableRow, TableCell, Paper, TableBody, Box } from '@mui/material'
 import { DataGrid, GridColDef, GridPreProcessEditCellProps } from '@mui/x-data-grid'
-import styles from './Table.module.sass'
 
-type Products = {
-  id: string,
-  subject: string,
-  article: string,
-  size: string,
-  availableForOrder: string,
-  goodsOnTheWay: string,
-  totalAmount: string
-}
+// Stores, utils, libs
+import { Products } from '@/types/Products'
+
+// CSS
+import styles from './Table.module.sass'
 
 type TableProps = {
   products: Products[],
@@ -36,7 +33,7 @@ function Table(props: TableProps) {
 
   const processRowUpdate = (newRow: Products) => {
     const updatedRow = { ...newRow, isNew: false };
-    props.setProducts(props.products.map((row) => (row.id === newRow.id ? updatedRow : row)));
+    props.setProducts(props.products.map((row) => (row.id === newRow.id ? updatedRow : row)))
     return updatedRow;
   };
 
@@ -51,9 +48,7 @@ function Table(props: TableProps) {
       <DataGrid 
         style={{ borderRadius: '18px 18px 0px 0px', minHeight: '250px' }}
         rows={props.products} 
-        slots={{  
-          footer: CustomFooterComponent
-        }}
+        slots={{ footer: CustomFooterComponent }}
         columns={columns} 
         processRowUpdate={processRowUpdate}
         hideFooterPagination
@@ -67,7 +62,6 @@ function Table(props: TableProps) {
           borderRight: 'solid 1px rgba(224, 224, 224, 1)', 
           borderLeft: 'solid 1px rgba(224, 224, 224, 1)',
           borderRadius: '0px 0px 18px 18px' 
-          
         }}
       >
         <TableBody>

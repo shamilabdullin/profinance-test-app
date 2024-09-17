@@ -1,8 +1,12 @@
 import React from 'react'
+
+// Components
 import FilterItem from '../FilterItem/FilterItem'
-import styles from './Filter.module.sass'
 import { Paper } from '@mui/material'
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
+
+// CSS
+import styles from './Filter.module.sass'
 
 type FilterProps = {
   barCode: string,

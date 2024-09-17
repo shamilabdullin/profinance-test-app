@@ -1,5 +1,9 @@
-import { Paper, TextField } from '@mui/material'
 import React from 'react'
+
+// Components
+import { Paper, TextField } from '@mui/material'
+
+// CSS
 import styles from './FilterItem.module.sass'
 
 type FilterItemProps = {

@@ -1,10 +1,16 @@
 'use client'
 import React, { Dispatch, SetStateAction } from 'react'
+
+// Components
 import Button from '../../ui/Button'
-import styles from './ActionButtons.module.sass'
 import IosShareIcon from '@mui/icons-material/IosShare'
-import { Products } from '@/app/page'
+
+// Stores, utils, libs
 import { downloadFile } from '@/utils/downloadFiles'
+import { Products } from '@/types/Products'
+
+// CSS
+import styles from './ActionButtons.module.sass'
 
 type ActionButtonsProps = {
   data: Products[],

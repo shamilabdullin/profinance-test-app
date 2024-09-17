@@ -1,6 +1,10 @@
 import React from 'react'
+
+// Components
 import Button from '../ui/Button'
-import SmsIcon from '@mui/icons-material/Sms';
+import SmsIcon from '@mui/icons-material/Sms'
+
+// CSS
 import styles from './LinkButton.module.sass'
 
 function LinkButton() {

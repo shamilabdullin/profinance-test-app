@@ -1,10 +1,16 @@
 import React, { Dispatch, SetStateAction, useState } from 'react'
+
+// Components
 import Filter from './Filter/Filter'
 import ActionButtons from './ActionButtons/ActionButtons'
 import Actions from './Actions/Actions'
 import Button from '../ui/Button'
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks'
-import { Products } from '@/app/page'
+
+// Stores, utils, libs
+import { Products } from '@/types/Products'
+
+// CSS
 import styles from './Main.module.sass'
 
 type MainProps = {

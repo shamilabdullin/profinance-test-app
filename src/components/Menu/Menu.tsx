@@ -1,5 +1,7 @@
 'use client'
 import React from 'react'
+
+// Components
 import { Card, CardContent, Typography } from '@mui/material'
 import MenuItem from './MenuItem'
 import Button from '../ui/Button'
@@ -8,11 +10,13 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import EditNoteIcon from '@mui/icons-material/EditNote'
 import StickyNote2Icon from '@mui/icons-material/StickyNote2'
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks'
+
+// CSS
 import styles from './Menu.module.sass'
 
 function Menu() {
   return (
-    <Card className={styles.card} >
+    <Card className={styles.card}>
       <CardContent>
         <div className={styles.card__content__header}>
           <Typography gutterBottom sx={{ fontSize: 14 }} component={'span'}>

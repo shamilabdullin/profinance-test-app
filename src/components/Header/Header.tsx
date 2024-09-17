@@ -1,9 +1,13 @@
 import React from 'react'
-import styles from './Header.module.sass'
+
+// Components
 import { Paper } from '@mui/material'
 import User from './User'
 import HeaderButtons from './HeaderButtons'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
+
+// CSS
+import styles from './Header.module.sass'
 
 function Header() {
   return (

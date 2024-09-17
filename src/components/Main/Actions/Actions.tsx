@@ -1,11 +1,17 @@
 import React, { Dispatch, SetStateAction } from 'react'
+
+// Components
 import Button from '@/components/ui/Button'
 import { Divider } from '@mui/material'
-import { Products } from '@/app/page'
+import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload'
+import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder'
+import CloseIcon from '@mui/icons-material/Close'
+
+// Stores, utils, libs
 import products from '../../../../data.json'
-import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
-import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
-import CloseIcon from '@mui/icons-material/Close';
+import { Products } from '@/types/Products'
+
+// CSS
 import styles from './Actions.module.sass'
 
 type ActionsProps = {

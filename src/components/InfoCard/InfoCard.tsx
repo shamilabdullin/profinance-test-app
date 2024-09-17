@@ -1,5 +1,9 @@
 import React from 'react'
+
+// Components
 import { Divider } from '@mui/material'
+
+// CSS
 import styles from './InfoCard.module.sass'
 
 function InfoCard() {
