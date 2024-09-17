@@ -121,7 +121,8 @@ const columns: GridColDef[] = [
   {
     field: 'availableForOrder',
     headerName: 'Доступно к заказу',
-    type: 'string',
+    align: 'left',
+    type: 'number',
     width: 180,
     editable: true,
     preProcessEditCellProps: (params: GridPreProcessEditCellProps) => {
@@ -132,7 +133,8 @@ const columns: GridColDef[] = [
   {
     field: 'goodsOnTheWay',
     headerName: 'Товары в пути',
-    type: 'string',
+    type: 'number',
+    align: 'left',
     width: 180,
     editable: true,
     preProcessEditCellProps: (params: GridPreProcessEditCellProps) => {
@@ -143,7 +145,8 @@ const columns: GridColDef[] = [
   {
     field: 'totalAmount',
     headerName: 'Итого кол-во товаров',
-    type: 'string',
+    type: 'number',
+    align: 'left',
     width: 180,
     editable: true,
     preProcessEditCellProps: (params: GridPreProcessEditCellProps) => {

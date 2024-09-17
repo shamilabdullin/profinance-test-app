@@ -18,7 +18,10 @@ function ActionButtons({ aticleNumber, barCode, data, setProducts, size }: Actio
 
   const handleFilterData = () => {
     const filteredProducts = data
-      .filter(product => product.id === barCode && product.article === aticleNumber && product.size === size)
+      .filter(product => product.id === barCode.trim() 
+        && product.article === aticleNumber.trim() 
+        && product.size === size.trim()
+      )
     setProducts(filteredProducts)
   }
 
